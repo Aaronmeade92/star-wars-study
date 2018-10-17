@@ -3,7 +3,9 @@ import shuffle from 'shuffle-array';
 
 export const FETCH = 'FETCH';
 
-let swapiURL = 'https://swapi.co/api/people/'
+let swapiPeopleURL = 'https://swapi.co/api/people/';
+let swapiFilmsURL = 'https://swapi.co/api/films/';
+
 
 export const fetch = (name) => ({
     type : FETCH,
@@ -12,18 +14,18 @@ export const fetch = (name) => ({
 
 export const fetchData = () => {
     return dispatch => {
-        superagent.get(`${swapiURL}`).then(response => {
+        superagent.get(`${swapiPeopleURL}`).then(response => {
             console.log(response.body.results)
             dispatch(fetch(shuffle(response.body.results)));
         });
     };
 };
 
-// export const randomName = () => {
-//     return dispatch => {
-//         superagent.get(`${swapiURL}`).then(response => {
-//             console.log(response.body.results)
-//             dispatch(fetch(shuffle(response.body.results)));
-//         })
-//     }
-// }
+export const fetchFilms = () => {
+    return dispatch => {
+        superagent.get(`${swapiFilmsURL}`).then(response => {
+            console.log(response.body.results)
+            dispatch(fetch(response.body.results));
+        });
+    };
+};
