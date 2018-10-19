@@ -8,6 +8,7 @@ import './App.css';
 import Dashboard from './components/Dashboard';
 import CharacterContent from './components/Character-Content.js';
 import FilmContent from './components/Film-Content.js';
+import ShipContent from './components/Ship-Content.js';
 
 class App extends Component {
   render() {
@@ -18,6 +19,8 @@ class App extends Component {
           <Route exact path='/home' component={Dashboard}/>
           <Route exact path='/characters' component={CharacterContent}/>
           <Route exact path='/films' component={FilmContent}/>
+          <Route exact path='/ships' component={ShipContent}/>
+
         </Fragment>
         </BrowserRouter>
       </Provider>

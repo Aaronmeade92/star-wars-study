@@ -21,6 +21,7 @@ class NavBar extends Component {
                 <NavLink style={navStyle} activeStyle={active} to='/home'>Home</NavLink>
                 <NavLink style={navStyle} activeStyle={active} to='/characters'>Characters</NavLink>
                 <NavLink style={navStyle} activeStyle={active} to='/films'>Films</NavLink>
+                <NavLink style={navStyle} activeStyle={active} to='/ships'>Ships</NavLink>
             </div>
         );
     }
