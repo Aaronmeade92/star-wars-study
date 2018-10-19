@@ -1,4 +1,4 @@
-import { FETCH } from '../actions/character-actions.js';
+import { FETCH } from '../actions/ship-actions.js';
 
 let initialState = [];
 
