@@ -1,7 +1,7 @@
 import superagent from 'superagent';
 import shuffle from 'shuffle-array';
 
-export const FETCH = 'FETCH';
+export const FETCH = 'character/FETCH';
 
 let swapiPeopleURL = 'https://swapi.co/api/people/';
 

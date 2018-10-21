@@ -2,7 +2,7 @@ import superagent from 'superagent';
 
 let swapiFilmsURL = 'https://swapi.co/api/films/';
 
-export const FETCH = "FETCH"
+export const FETCH = "film/FETCH"
 
 export const get = (film) => ({
     type : FETCH,
